@@ -62,7 +62,7 @@ class Participant(mo.Model):
         unknown = mo.EXCLUDE
 
     role = mo.fields.String()
-    participated_on = mo.fields.DateTime()
+    participated_on = mo.fields.DateTime(allow_none=True)
     approved = mo.fields.Boolean()
     user = mo.NestedModel(User)
 
